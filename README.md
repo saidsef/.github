@@ -1,4 +1,4 @@
-# .github - a hidden gem in repository management
+# GitHub meta repository
 
 GitHub meta repository for [@saidsef account](https://github.com/saidsef).
 

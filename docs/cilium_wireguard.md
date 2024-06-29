@@ -1,8 +1,8 @@
-# Documentation: Installing Cilium v1.15 with Kubernetes and Enabling WireGuard Encryption
+# Documentation: Installing Cilium with Kubernetes and Enabling WireGuard Encryption
 
 ## Introduction
 
-In today's digital landscape, ensuring the security and integrity of network communications is paramount. Cilium, a powerful networking and security solution for Kubernetes, offers advanced features to enhance the security posture of your Kubernetes clusters. This documentation provides a comprehensive guide for installing Cilium v1.15 on Kubernetes clusters with version 1.26 or higher, and enabling WireGuard encryption to secure your network traffic. By following this guide, your organisation can achieve robust network security, safeguarding sensitive data and maintaining compliance with industry standards.
+In today's digital landscape, ensuring the security and integrity of network communications is paramount. Cilium, a powerful networking and security solution for Kubernetes, offers advanced features to enhance the security posture of your Kubernetes clusters. This documentation provides a comprehensive guide for installing Cilium v1.15 or later on Kubernetes clusters with version 1.26 or higher, and enabling WireGuard encryption to secure your network traffic. By following this guide, your organisation can achieve robust network security, safeguarding sensitive data and maintaining compliance with industry standards.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ Before proceeding with the installation, ensure that the following prerequisites
 1. **Kubernetes Cluster**: A running Kubernetes cluster with version >= 1.26 or higher.
 2. **kubectl**: The Kubernetes command-line tool installed and configured to interact with your cluster.
 3. **Helm**: The package manager for Kubernetes, installed and configured.
-4. (Optional) **Cilium CLI** A [Cilium CLI downloaded](https://github.com/cilium/cilium/releases) >= v1.15.0
+4. (Optional) **Cilium CLI** The [Cilium command-line]((https://github.com/cilium/cilium/releases)) interface installed >= v1.15.0
 
 ## Step-by-Step Installation Guide
 

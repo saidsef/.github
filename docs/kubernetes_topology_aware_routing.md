@@ -15,7 +15,7 @@ In the ever-evolving landscape of cloud-native applications, ensuring optimal pe
 
 ### Prerequisites
 
-- Kubernetes cluster version 1.21 or later.
+- Kubernetes cluster version 1.23 or later.
 - `kube-proxy` configured in IPVS mode.
 - Nodes labelled with topology keys such as `topology.kubernetes.io/zone` and `topology.kubernetes.io/region`.
 
@@ -43,7 +43,7 @@ When creating a Service, set the `topologyKeys` field to specify the preferred t
 apiVersion: v1
 kind: Service
 metadata:
-name: my-service
+  name: my-service
 spec:
   selector:
     app: my-app
@@ -93,8 +93,14 @@ Use Kubernetes metrics and logs to monitor how traffic is being distributed acro
 kubectl logs -l app=my-app
 ```
 
+### Enabling Topology Aware Routing
+
+> Prior to Kubernetes 1.27, this behavior was controlled using the `service.kubernetes.io/topology-aware-hints` annotation.
+
+You can enable Topology Aware Routing for a Service by setting the `service.kubernetes.io/topology-mode` annotation to `Auto`. When there are enough endpoints available in each zone, Topology Hints will be populated on EndpointSlices to allocate individual endpoints to specific zones, resulting in traffic being routed closer to where it originated from.
+
 ## Conclusion
 
 Kubernetes Topology Aware Routing is a powerful feature that can significantly enhance the performance and efficiency of your applications. By intelligently routing traffic based on the cluster's topology, it ensures reduced latency, better resource utilisation, and improved fault tolerance. Implementing this feature requires careful configuration and validation, but the benefits it brings to your cloud-native infrastructure are well worth the effort.
 
-For further details and advanced configurations, refer to the official Kubernetes documentation on Topology Aware Routing.
+For further details and advanced configurations, refer to the official Kubernetes documentation on [Topology Aware Routing](https://kubernetes.io/docs/concepts/services-networking/topology-aware-routing/).

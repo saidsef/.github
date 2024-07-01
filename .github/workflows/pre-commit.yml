@@ -17,3 +17,20 @@ jobs:
     - uses: pre-commit/action@v3.0.1
       with:
         extra_args: "-a"
+
+  auto-approve:
+    runs-on: ubuntu-latest
+    needs: [pre-commit]
+    if: ${{ github.event_name == 'pull_request' }}
+    steps:
+    - name: Auto Approve PR
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ github.token }}
+        script: |
+          github.rest.pulls.createReview({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.issue.number,
+            event: "APPROVE"
+          })

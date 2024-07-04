@@ -1,4 +1,4 @@
-# Documentation: Installing Cilium with Kubernetes and Enabling WireGuard Encryption
+# Installing Cilium with Kubernetes and Enabling WireGuard Encryption
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Documentation: Implementing Topology-Aware Routing in Amazon EKS with Istio
+# Implementing Topology-Aware Routing in Amazon EKS with Istio
 
 ## Introduction
 

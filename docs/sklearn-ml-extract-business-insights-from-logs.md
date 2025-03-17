@@ -11,7 +11,7 @@ Before getting started, ensure you have the following:
 1. **Basic Understanding of Python:** Familiarity with Python programming is essential.
 2. **Installed Python Environment:** Have Python 3.x installed on your system along with pip.
 3. **Basic Knowledge of Machine Learning Concepts:** Understanding of supervised learning, feature extraction, and model evaluation is beneficial.
-4. **Access to Website Logs:** You should have access to website log data, similar to the format shared in the example provided. ****I use [Pino](https://www.npmjs.com/package/pino) that formats the output in json****.
+4. **Access to Website Logs:** You should have access to website log data, similar to the format shared in the example provided. *I use [Pino](https://www.npmjs.com/package/pino) that formats the output in JSON*.
 5. **Installed Libraries:** Ensure `sklearn`, `pandas`, and `numpy` are installed. You can install these packages using pip:
 ```bash
 pip install sklearn pandas numpy

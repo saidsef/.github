@@ -95,7 +95,7 @@ def predict():
   data = request.get_json(force=True)
   features = [data['status'], data['response_time']]
   prediction = clf.predict([features])
-  return jsonify({'conversion_prediction': bool(prediction)})
+  return jsonify({'conversion_prediction': bool(prediction[0])})
 ```
 Run this server and connect it to your website to process log data in real-time.
 

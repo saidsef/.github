@@ -1,4 +1,4 @@
-# Using scikit-learn to Extract Business Insights from Website Logs: A Practical Guide
+# Using scikit-learn to Extract Business Insights from Logs: A Practical Guide
 
 ## Introduction
 

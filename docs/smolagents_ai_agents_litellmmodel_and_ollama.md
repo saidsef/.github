@@ -2,11 +2,13 @@
 
 ## Preface
 
-This document is a follow-up to previous documentation on [building AI agent using smolagents](https://github.com/saidsef/.github/blob/main/docs/huggingface_smolagents_build_agents.md)
+This document is a follow-up to previous documentation on [building AI agent using smolagents](https://github.com/saidsef/.github/blob/main/docs/huggingface_smolagents_build_agents.md).
 
 ## Introduction
 
-Smolagents, combined with LiteLLMModel and Ollama, provides a brilliant framework for building AI agents that can leverage local Large Language Models (LLMs), it allows you to bypass expensive API calls, drastically reduce your expenditure on API fees. This guide will demonstrate how to create an agent that utilises Ollama's models through LiteLLM's unified interface.
+In today’s rapidly evolving landscape, AI agents are becoming increasingly indispensable for automating complex tasks. The simplicity and flexibility offered by the SmolAgents library make it an ideal choice for developers looking to build powerful agentic systems quickly. This guide aims to demystify the process of setting up SmolAgents with the LiteLLMModel and Ollama, providing a step-by-step walkthrough.
+
+Smolagents, combined with LiteLLMModel and [Ollama](https://ollama.com/search), provides a brilliant framework for building AI agents that can leverage local Large Language Models (LLMs), it allows you to bypass expensive API calls, drastically reduce your expenditure on API fees. This guide will demonstrate how to create an agent that utilises Ollama's models through LiteLLM's unified interface.
 
 ## Understanding the Agentic Architecture
 
@@ -21,7 +23,7 @@ The integration works through:
 - Ollama installed and running locally
 - Python environment with smolagents
 - Basic understanding of agent architectures
-- Qwen 14B model pulled in Ollama (ollama pull qwen2.5:14b)
+- Qwen 14B model pulled in Ollama (`ollama pull qwen2.5:14b`)
 
 ## Step-by-Step Guide
 
@@ -115,8 +117,40 @@ def create_agent(additional_tools=None):
 - Implement error handling for tool execution
 - Cache frequent operations for better performance
 
+## Business Use Cases
+
+In this documentation we have used `ollama/qwen2.5:14b`, here are some business use cases:
+
+- Code Review Assistant
+  - Analyses code changes and provides detailed feedback
+  - Suggests optimisations and identifies security vulnerabilities
+  - Ensures coding standards compliance
+- Technical Documentation
+  - Generates API documentation from code
+  - Creates technical specifications
+  - Maintains documentation updates
+- Market Research
+  - Analyses trending ML models
+  - Performs competitive analysis
+  - Summarises industry developments
+- Development Support
+  - Assists with debugging
+  - Suggests code improvements
+  - Provides implementation examples
+- Batch Workloads
+  - Enhance product descriptions
+  - Generate metadata tags
+  - Translate content in bulk
+  - Summarise documents
+- Analysis Tasks
+  - Logs analysis
+  - Data quality assessments
+  - API documentation updates
+
+You can use a different **model** from [ollama model](https://ollama.com/search) and adapt it to your requirements, the only limits are your imagination ***and the available hardware***.
+
 ## Conclusion
 
 This setup provides a robust foundation for building AI agents that run locally whilst maintaining the flexibility to add cloud services when needed. The combination of Smolagents, LiteLLM, and Ollama offers a sophisticated platform for developing intelligent applications.
 
-To execute the example, ensure Ollama is running (ollama serve) and your Python environment has all required dependencies installed.
+To execute the example, make sure Ollama is running `ollama serve` and your Python environment has all required dependencies installed.

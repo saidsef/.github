@@ -10,7 +10,7 @@ Understanding general data transfer charges on Google Cloud Platform (GCP) will 
 
 ### Data Transfer Charges Across Worker Nodes and Control Plane
 
-To better understand data transfer costs, we need to understand the different network topologies that GKE supports. The documentation page on [Creating a VPC for your GKE cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-vpc) provides you with a better understanding of those network topologies.
+To better understand data transfer costs, we need to understand the different network topologies that GKE supports. The [About network isolation in GKE](https://docs.cloud.google.com/kubernetes-engine/docs/concepts/network-isolation) page explains those network topologies.
 
 In any GKE network topology, worker nodes communicate with the control plane either through the public endpoint or through the GKE-managed network interfaces that are placed in the subnets you provide when you create the cluster. The route that worker nodes take to connect is determined by whether you have enabled or disabled the private endpoint for your cluster. Depending on how you have configured your GKE cluster and VPC, there will be data transfer out charges and NAT gateway data transfer charges. Even actions that originate from the Kubernetes API server, such as `kubectl exec` and `kubectl logs`, may result in cross-region data transfer charges. However, these charges should be negligible and should not drive up your data transfer costs.
 
